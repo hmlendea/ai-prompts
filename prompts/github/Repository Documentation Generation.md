@@ -524,6 +524,19 @@ The documentation under `docs/` must complement the root
 
 ------------------------------------------------------------------------
 
+# Documentation Location Constraints
+
+Do not generate the following inside `docs/`:
+
+-   **Roadmap** — belongs at repository root as `ROADMAP.md`
+-   **Privacy policy** — belongs at repository root as `PRIVACY.md`
+-   **Security notice** — belongs at repository root as `SECURITY.md`
+-   **License** — belongs at repository root as `LICENSE`
+
+These files must reside at the repository root, not under `docs/`.
+
+------------------------------------------------------------------------
+
 # Final Standard
 
 Approach this task at the level expected from an expert software
