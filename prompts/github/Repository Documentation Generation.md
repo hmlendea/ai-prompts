@@ -451,21 +451,80 @@ docs/
 ├── testing.md                        # Test strategy, organisation, coverage
 ├── concurrency-and-scheduling.md     # Threading, async, schedulers, locks
 ├── error-handling.md                 # Error taxonomy, handling patterns, recovery
+├── logging.md                        # Logging framework, levels, structured fields, correlation, sinks
 ├── invariants.md                     # System-wide invariants and contracts
 ├── build-and-deployment.md           # Build pipeline, deployment, environments
 ├── security.md                       # Security model, threats, mitigations (complements root SECURITY.md)
 ├── ambiguities-and-open-questions.md # Unresolved items, TODOs, known gaps
 ├── change-guide.md                   # How to modify common areas safely
-└── documentation-maintenance.md      # How to keep docs current, ownership
+├── documentation-maintenance.md      # How to keep docs current, ownership
+└── api-reference/                    # API reference (one file per controller)
+    ├── INDEX.md                      # API reference index, endpoint summary table
+    ├── controller-a.md               # One file per controller
+    ├── controller-b.md
+    └── ...
 ```
 
 ## Naming Standards
 
 - **Files**: kebab-case (`state-and-persistence.md`, not `stateAndPersistence.md`)
-- **Directories**: kebab-case, plural for collections (`components/`, `flows/`, `behaviour/`)
+- **Directories**: kebab-case, plural for collections (`components/`, `flows/`, `behaviour/`, `api-reference/`)
 - **Headings**: Sentence case (`## Repository purpose`, not `## Repository Purpose`)
 - **Cross-references**: Relative links from `docs/` root (`[Architecture](./architecture.md)`)
 - **Code symbols**: Backticks with full namespace (``Namespace.Class.Method`)
+
+## API Reference Requirements
+
+The `api-reference/` directory must contain one file per controller. Each controller file must document every endpoint with:
+
+### Per-Endpoint Documentation
+
+For each endpoint, include:
+
+1. **HTTP method and path** — `GET /api/v1/resource/{id}`
+2. **Controller action** — Fully qualified method name (``ControllerName.ActionName``)
+3. **Authentication/authorisation** — Required schemes, roles, policies
+4. **Request**:
+   - Path parameters (name, type, constraints, example)
+   - Query parameters (name, type, required/optional, default, example)
+   - Headers (name, required/optional, example)
+   - Body schema (JSON example, field descriptions, validation rules)
+5. **Response**:
+   - Success status code(s) with JSON example(s)
+   - Error status codes with JSON error response examples
+   - Response headers (if relevant)
+6. **Behaviour summary** — What the endpoint does, side effects, idempotency
+7. **Flow references** — Links to relevant `flows/*.md` files
+8. **Error scenarios** — Documented error codes, conditions, and example responses
+
+### Controller File Structure
+
+Each controller file (`controller-name.md`) must follow:
+
+```markdown
+# ControllerName
+
+Base path: `/api/v1/controller-name`
+
+## ActionName (HTTP_METHOD /path)
+
+[Per-endpoint documentation as above]
+
+## AnotherAction (HTTP_METHOD /path)
+
+[Per-endpoint documentation as above]
+```
+
+### api-reference/INDEX.md
+
+Must provide:
+
+- Summary table of all endpoints (Method, Path, Controller, Action, Auth)
+- Links to each controller file
+- Global authentication schemes
+- Versioning strategy
+- Rate limiting / throttling policies
+- Links to related `flows/`, `components/`, `data-model.md`
 
 ## INDEX.md Requirements
 
@@ -476,6 +535,23 @@ The `INDEX.md` must provide:
 3. **Documentation catalogue** — grouped, linked list of every file under `docs/` with one-line descriptions
 4. **Navigation aids** — "Start here" for newcomers, "Deep dive" for component owners, "Flows" for debuggers
 5. **Maintenance metadata** — last reviewed date, owner, coverage status
+
+## Logging Documentation Requirements
+
+The `logging.md` file must document:
+
+1. **Logging framework** — Library used (e.g., Serilog, NLog, log4net, Winston), configuration source
+2. **Log levels** — Which levels are used (Debug, Info, Warning, Error, Fatal) and their semantics
+3. **Structured fields** — Standard properties attached to every log entry (request ID, user ID, correlation ID, timestamp format)
+4. **Correlation** — How requests are traced across components (correlation IDs, trace IDs, span IDs)
+5. **Sinks/destinations** — Where logs are written (console, file, database, external service) and their configuration
+6. **Redaction/masking** — What sensitive data is redacted or masked in logs
+7. **Retention** — Log retention policies, rotation, archiving
+8. **Sampling** — Whether log sampling is used and under what conditions
+9. **Performance considerations** — Impact of logging on throughput, async vs sync logging
+10. **Error logging** — How exceptions are logged (stack traces, inner exceptions, context)
+11. **Audit logging** — Security-relevant events that are logged separately
+12. **Configuration** — Where logging is configured and how to change levels at runtime
 
 ## Root Document Integration
 
