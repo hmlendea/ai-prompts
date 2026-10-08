@@ -425,15 +425,13 @@ Generate documentation under `docs/` with the following structure. Create as man
 
 ```
 docs/
-├── INDEX.md                          # Master index and navigation
-├── architecture.md                   # High-level architecture (complements root ARCHITECTURE.md)
-├── repository-overview.md            # Repository purpose, scope, entry points
-├── repository-structure.md           # Source tree layout, module organisation
-├── design-decisions.md               # Key architectural/design choices and rationale
-├── dependencies.md                   # External and internal dependencies
-├── configuration.md                  # Configuration schema, sources, precedence
-├── data-model.md                     # Domain entities, relationships, persistence
-├── state-and-persistence.md          # State management, stores, caches, migrations
+├── api-reference/                    # API reference (one file per controller)
+│   ├── INDEX.md                      # API reference index, endpoint summary table
+│   ├── controller-a.md               # One file per controller
+│   └── controller-b.md
+├── behaviour/                        # User-facing behaviours
+│   ├── browse-and-search.md
+│   └── inspect-edit-delete.md
 ├── components/                       # Per-component deep dives
 │   ├── presentation.md
 │   ├── host-and-composition.md
@@ -444,25 +442,30 @@ docs/
 │   ├── startup-and-rendering.md
 │   ├── calendar-search.md
 │   └── detail-mutation.md
-├── behaviour/                        # User-facing behaviours
-│   ├── browse-and-search.md
-│   └── inspect-edit-delete.md
-├── integrations.md                   # External system integrations
-├── testing.md                        # Test strategy, organisation, coverage
-├── concurrency-and-scheduling.md     # Threading, async, schedulers, locks
-├── error-handling.md                 # Error taxonomy, handling patterns, recovery
-├── logging.md                        # Logging framework, levels, structured fields, correlation, sinks
-├── invariants.md                     # System-wide invariants and contracts
-├── build-and-deployment.md           # Build pipeline, deployment, environments
-├── security.md                       # Security model, threats, mitigations (complements root SECURITY.md)
+├── api-usage-examples.md             # Example requests/responses for API usage
 ├── ambiguities-and-open-questions.md # Unresolved items, TODOs, known gaps
+├── architecture.md                   # High-level architecture (complements root ARCHITECTURE.md)
+├── build-and-deployment.md           # Build pipeline, deployment, environments
 ├── change-guide.md                   # How to modify common areas safely
+├── configuration.md                  # Configuration schema, sources, precedence
+├── concurrency-and-scheduling.md     # Threading, async, schedulers, locks
+├── data-model.md                     # Domain entities, relationships, persistence
+├── dependencies.md                   # External and internal dependencies
+├── design-decisions.md               # Key architectural/design choices and rationale
 ├── documentation-maintenance.md      # How to keep docs current, ownership
-└── api-reference/                    # API reference (one file per controller)
-    ├── INDEX.md                      # API reference index, endpoint summary table
-    ├── controller-a.md               # One file per controller
-    ├── controller-b.md
-    └── ...
+├── error-handling.md                 # Error taxonomy, handling patterns, recovery
+├── faq.md                            # Frequently asked questions
+├── INDEX.md                          # Master index and navigation
+├── invariants.md                     # System-wide invariants and contracts
+├── integrations.md                   # External system integrations
+├── logging.md                        # Logging framework, levels, structured fields, correlation, sinks
+├── quick-start.md                    # Getting started guide for newcomers
+├── repository-overview.md            # Repository purpose, scope, entry points
+├── repository-structure.md           # Source tree layout, module organisation
+├── security.md                       # Security model, threats, mitigations (complements root SECURITY.md)
+├── state-and-persistence.md          # State management, stores, caches, migrations
+├── testing.md                        # Test strategy, organisation, coverage
+└── troubleshooting.md                # Common issues and solutions
 ```
 
 ## Naming Standards
