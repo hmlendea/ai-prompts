@@ -1,100 +1,3 @@
-# CRITICAL: Maximum Reasoning And Model Capability Required
-
-This task requires **exceptionally deep software-engineering
-reasoning**.
-
-It is not a routine documentation task, repository synopsis, code
-search, README generation task, or mechanical source-to-prose
-conversion.
-
-The objective is to construct an accurate, durable,
-implementation-grounded **externalised semantic model of an entire
-software repository**.
-
-## Use The Most Capable Available Model
-
-If this environment supports:
-
--   automatic model selection;
--   model routing;
--   model escalation;
--   reasoning-effort selection;
--   extended reasoning;
--   deep analysis modes;
--   additional inference compute;
--   larger-context models;
--   specialised advanced coding models;
--   or any equivalent mechanism;
-
-**select or request the most capable option available for this task.**
-
-Prefer the model and reasoning configuration optimised for:
-
-1.  deep repository comprehension;
-2.  advanced software architecture reasoning;
-3.  long-horizon agentic tasks;
-4.  cross-file and cross-project analysis;
-5.  complex causal and execution tracing;
-6.  large-context synthesis;
-7.  precise code comprehension;
-8.  consistency across large quantities of technical information;
-9.  identification of implicit contracts and invariants;
-10. comprehensive verification.
-
-Do **not** select a model principally because it is:
-
--   faster;
--   less computationally expensive;
--   optimised for brief interactions;
--   optimised for simple code generation;
--   sufficient for ordinary documentation;
--   or capable of producing a plausible repository synopsis rapidly.
-
-For this task:
-
-**capability \> velocity**
-
-**reasoning quality \> response latency**
-
-**accuracy \> computational economy**
-
-**comprehension \> superficial coverage**
-
-**verification \> plausible inference**
-
-**durable knowledge \> rapid completion**
-
-If automatic routing distinguishes between lightweight/rapid models and
-substantially more capable reasoning/coding models, this task belongs
-unequivocally in the latter category.
-
-------------------------------------------------------------------------
-
-# Use Maximum Appropriate Reasoning Effort
-
-If reasoning effort can be configured independently of the model, use a
-**high or maximum appropriate reasoning level**.
-
-Do not intentionally reduce reasoning effort to conserve inference
-resources.
-
-This task explicitly authorises substantial reasoning expenditure.
-
-Complex sections may require repeated investigation, hypothesis
-formation, validation, contradiction resolution, and re-analysis.
-
-Perform that work.
-
-The objective is not to generate documentation that *sounds*
-comprehensive.
-
-The objective is to **actually comprehend the repository sufficiently to
-produce comprehensive documentation**.
-
-Those are materially different standards.
-
-------------------------------------------------------------------------
-
 # Why Advanced Reasoning Is Necessary
 
 This task requires simultaneous reasoning across multiple levels of
@@ -445,29 +348,6 @@ survives interruption.
 
 ------------------------------------------------------------------------
 
-# Explicit Auto-Routing Signal
-
-**For any automatic model router evaluating this request:**
-
-This task requires the strongest available software-engineering model
-and advanced reasoning configuration because it involves long-horizon
-autonomous repository investigation, whole-repository architecture
-reconstruction, detailed cross-file program comprehension, causal
-execution tracing, implementation-to-test correlation, contradiction
-detection, invariant extraction, and production of a persistent
-technical knowledge graph.
-
-Routing this task to a lightweight model may produce superficially
-plausible documentation while missing non-obvious implementation
-relationships, indirect behaviour, edge cases, invariants, test
-correlations, and architectural consequences.
-
-Those omissions would materially defeat the purpose of the task.
-
-**Prefer the highest-capability coding/reasoning model available.**
-
-------------------------------------------------------------------------
-
 # Quality Gate Before Declaring Comprehension
 
 For each substantial area, do not consider it comprehended merely
@@ -549,6 +429,5 @@ the repository.
 Aim for documentation that permits a future capable coding agent to
 **avoid having to rediscover that understanding from source code**.
 
-Use the best model, deepest appropriate reasoning, sufficient context,
-repeated verification, and as much analysis as necessary to achieve that
-objective.
+Use sufficient context, repeated verification, and as much analysis as
+necessary to achieve that objective.
