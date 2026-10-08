@@ -417,6 +417,74 @@ These files must reside at the repository root, not under `docs/`.
 
 ------------------------------------------------------------------------
 
+# Documentation Structure
+
+Generate documentation under `docs/` with the following structure. Create as many files as needed to properly separate concerns.
+
+## Directory Layout
+
+```
+docs/
+├── INDEX.md                          # Master index and navigation
+├── architecture.md                   # High-level architecture (complements root ARCHITECTURE.md)
+├── repository-overview.md            # Repository purpose, scope, entry points
+├── repository-structure.md           # Source tree layout, module organisation
+├── design-decisions.md               # Key architectural/design choices and rationale
+├── dependencies.md                   # External and internal dependencies
+├── configuration.md                  # Configuration schema, sources, precedence
+├── data-model.md                     # Domain entities, relationships, persistence
+├── state-and-persistence.md          # State management, stores, caches, migrations
+├── components/                       # Per-component deep dives
+│   ├── presentation.md
+│   ├── host-and-composition.md
+│   ├── application-services.md
+│   ├── browser-state-and-localisation.md
+│   └── integration-models.md
+├── flows/                            # End-to-end execution flows
+│   ├── startup-and-rendering.md
+│   ├── calendar-search.md
+│   └── detail-mutation.md
+├── behaviour/                        # User-facing behaviours
+│   ├── browse-and-search.md
+│   └── inspect-edit-delete.md
+├── integrations.md                   # External system integrations
+├── testing.md                        # Test strategy, organisation, coverage
+├── concurrency-and-scheduling.md     # Threading, async, schedulers, locks
+├── error-handling.md                 # Error taxonomy, handling patterns, recovery
+├── invariants.md                     # System-wide invariants and contracts
+├── build-and-deployment.md           # Build pipeline, deployment, environments
+├── security.md                       # Security model, threats, mitigations (complements root SECURITY.md)
+├── ambiguities-and-open-questions.md # Unresolved items, TODOs, known gaps
+├── change-guide.md                   # How to modify common areas safely
+└── documentation-maintenance.md      # How to keep docs current, ownership
+```
+
+## Naming Standards
+
+- **Files**: kebab-case (`state-and-persistence.md`, not `stateAndPersistence.md`)
+- **Directories**: kebab-case, plural for collections (`components/`, `flows/`, `behaviour/`)
+- **Headings**: Sentence case (`## Repository purpose`, not `## Repository Purpose`)
+- **Cross-references**: Relative links from `docs/` root (`[Architecture](./architecture.md)`)
+- **Code symbols**: Backticks with full namespace (``Namespace.Class.Method`)
+
+## INDEX.md Requirements
+
+The `INDEX.md` must provide:
+
+1. **Repository summary** — one-paragraph purpose and scope
+2. **Root document map** — links to `ARCHITECTURE.md`, `SECURITY.md`, `ROADMAP.md`, `PRIVACY.md`, `LICENSE` at repository root (if present)
+3. **Documentation catalogue** — grouped, linked list of every file under `docs/` with one-line descriptions
+4. **Navigation aids** — "Start here" for newcomers, "Deep dive" for component owners, "Flows" for debuggers
+5. **Maintenance metadata** — last reviewed date, owner, coverage status
+
+## Root Document Integration
+
+- Reference root `ARCHITECTURE.md`, `SECURITY.md`, `ROADMAP.md`, `PRIVACY.md`, `LICENSE` from `INDEX.md` and relevant `docs/` files
+- Do not duplicate root document content under `docs/`
+- Complement, don't replicate: `docs/architecture.md` elaborates on root `ARCHITECTURE.md`; `docs/security.md` elaborates on root `SECURITY.md`
+
+------------------------------------------------------------------------
+
 # Final Standard
 
 Approach this task at the level expected from an expert software
