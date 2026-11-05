@@ -8,6 +8,7 @@ This document covers the guidelines and processes for contributing to this proje
   - [Reporting Issues](#reporting-issues)
   - [Suggesting Enhancements](#suggesting-enhancements)
   - [Code Contributions](#code-contributions)
+- [Code of Conduct](#-code-of-conduct)
 - [License](#-license)
 
 ## 🤝 How to Contribute
@@ -50,6 +51,10 @@ cd ai-prompts
 - Keep PRs focused and atomic.
 - Revise documentation if applicable.
 - Ensure the CI checks pass.
+
+## 📋 Code of Conduct
+
+This project follows the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## 📄 License
 
