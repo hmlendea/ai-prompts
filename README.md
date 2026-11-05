@@ -1,9 +1,10 @@
-# ai-prompts
+# AI Prompts
 
 ## 📑 Table of Contents
 
 - [Contributing](#-contributing)
 - [Code of Conduct](#-code-of-conduct)
+- [Architecture](#-architecture)
 - [License](#-license)
 
 ## 🤝 Contributing
@@ -21,6 +22,12 @@ See the [Contributing Guidelines](./CONTRIBUTING.md) for details on how to repor
 ## 📜 Code of Conduct
 
 See the [Code of Conduct](./CODE_OF_CONDUCT.md) for the standards of conduct expected in all project spaces.
+
+## 🏗️ Architecture
+
+AI Prompts provides a curated collection of GitHub Copilot prompt files organised in a flat, document-centric structure for direct consumption by Copilot's instruction loading mechanism.
+
+See the [Architecture Documentation](./ARCHITECTURE.md) for the system context, principal components, runtime flows, ownership boundaries, dependencies, constraints, and extension points.
 
 ## 📄 License
 
